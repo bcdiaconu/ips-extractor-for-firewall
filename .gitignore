@@ -1,0 +1,33 @@
+# Ignore output files and system files
+*.txt
+*.log
+*.out
+*.bak
+*.swp
+*.swo
+*.tmp
+*.cache
+
+# Ignore generated IP lists
+/var/www/localhost/htdocs/*.txt
+
+# Ignore OS/Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# Ignore backup and temp files
+*~
+#*
+
+# Ignore shell history
+.bash_history
+.zsh_history
+.history
+
+# Ignore compiled binaries
+*.exe
+*.o
+*.out
