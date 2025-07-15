@@ -20,7 +20,38 @@ echo "$NETWORKS" | tr ' ' '\n' > "$TEMP_DIR/manual_networks.txt"
 
 # GitHub domains to resolve via DNS
 echo "Extracting IPs from GitHub domains via DNS..."
-DOMAINS="github.com www.github.com api.github.com codeload.github.com github-releases.githubusercontent.com raw.githubusercontent.com objects.githubusercontent.com pkg-containers.githubusercontent.com avatars0.githubusercontent.com avatars1.githubusercontent.com avatars2.githubusercontent.com avatars3.githubusercontent.com avatars.githubusercontent.com central.github.com cloud.githubusercontent.com gist.github.com help.github.com nodeload.github.com status.github.com training.github.com assets-cdn.github.com documentcloud.github.com pages.github.com raw.github.com ghcr.io npm.pkg.github.com maven.pkg.github.com nuget.pkg.github.com rubygems.pkg.github.com docker.pkg.github.com"
+DOMAINS="
+github.com
+www.github.com
+api.github.com
+codeload.github.com
+github-releases.githubusercontent.com
+raw.githubusercontent.com
+objects.githubusercontent.com
+pkg-containers.githubusercontent.com
+avatars0.githubusercontent.com
+avatars1.githubusercontent.com
+avatars2.githubusercontent.com
+avatars3.githubusercontent.com
+avatars.githubusercontent.com
+central.github.com
+cloud.githubusercontent.com
+gist.github.com
+help.github.com
+nodeload.github.com
+status.github.com
+training.github.com
+assets-cdn.github.com
+documentcloud.github.com
+pages.github.com
+raw.github.com
+ghcr.io
+npm.pkg.github.com
+maven.pkg.github.com
+nuget.pkg.github.com
+rubygems.pkg.github.com
+docker.pkg.github.com
+"
 
 # Use the create_ips_list.sh script to resolve domains
 ./create_ips_list.sh "$DOMAINS" "$TEMP_DIR/dns_ips.txt"
