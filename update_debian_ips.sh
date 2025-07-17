@@ -7,6 +7,7 @@ security.debian.org
 ftp.debian.org
 cdn-fastly.deb.debian.org
 deb.torproject.org
+deb.nodesource.com
 httpredir.debian.org
 packages.debian.org
 snapshot.debian.org
@@ -33,6 +34,7 @@ mentors.debian.net
 screenshots.debian.net
 piuparts.debian.org
 popcon.debian.org
+debian.map.fastlydns.net
 "
 
 # Save IPs to output file
