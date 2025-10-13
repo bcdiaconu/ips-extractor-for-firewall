@@ -59,6 +59,7 @@ resolve_ip() {
   fi
 
   echo "# Resolving $domain (depth: $depth)" >> "$TMP"
+  echo "Interrogating: $domain (depth: $depth)"
 
   # A records (IPv4)
   A_RECORDS=$(dig +short A "$domain" 2>/dev/null)
@@ -78,6 +79,7 @@ resolve_ip() {
     # Remove trailing dot from FQDN
     cname=$(echo "$cname" | sed 's/\.$//')
     echo "# CNAME for $domain: $cname" >> "$TMP"
+    echo "  -> CNAME resolves to: $cname"
     resolve_ip "$cname" $((depth + 1))
   done
 }
