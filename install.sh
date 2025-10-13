@@ -56,6 +56,11 @@ for script in "$IP_SCRIPTS_DIR"/*.sh; do
         continue
     fi
     
+    # Make the source script executable
+    chmod +x "$script" || {
+        echo "  Warning: Failed to set executable permission for $script_name"
+    }
+    
     # Create symbolic link
     echo "  Linking: $script_name"
     ln -s "$script" "$target_link" || {
