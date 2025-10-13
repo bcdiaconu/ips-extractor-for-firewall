@@ -86,6 +86,7 @@ resolve_ip() {
 
 # Process all domains and resolve their IPs
 resolve_all_domains() {
+  echo "================================================"
   echo "Starting DNS resolution for domains: $DOMAINS"
   
   for domain in $DOMAINS; do
@@ -153,9 +154,9 @@ process_and_filter_ips() {
 verify_output() {
   if [ -f "$OUTPUT" ] && [ -s "$OUTPUT" ]; then
     IP_COUNT=$(wc -l < "$OUTPUT")
-    echo "Success: $IP_COUNT IP addresses/networks saved to: $OUTPUT"
+    echo "✓ Success: $IP_COUNT IP addresses/networks saved to: $OUTPUT"
   else
-    echo "Warning: No valid IP addresses found or output file is empty."
+    echo "✗ Warning: No valid IP addresses found or output file is empty."
     exit 1
   fi
 }
